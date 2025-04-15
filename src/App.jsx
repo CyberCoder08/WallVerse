@@ -1,13 +1,11 @@
-import React from "react";
-import WallpaperGrid from "./components/WallpaperGrid";
+import React from 'react'
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-zinc-900 text-white p-4">
-      <h1 className="text-3xl font-bold mb-4 text-center">WallVerse</h1>
-      <WallpaperGrid />
+    <div className="flex items-center justify-center h-screen bg-gradient-to-br from-purple-700 to-black text-white text-3xl font-bold">
+      Welcome to WallVerse!
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
