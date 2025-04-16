@@ -1,4 +1,4 @@
-const API_KEY = "YOUR_PEXELS_API_KEY";
+const API_KEY = "tPlJc5tScaNJbJtYPLiW5CvCb9uDHaGU4z4DrocI45QlKU7kLfyJl5hl";
 const grid = document.getElementById("wallpaperGrid");
 
 async function searchWallpapers() {
