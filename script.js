@@ -1,21 +1,13 @@
-const ACCESS_KEY = "8cBUjJ99dXuFDzwqUgvMOyzHUd5hLCz3mYBRZoCUfI8"; // Unsplash API Key
 const grid = document.getElementById("wallpaperGrid");
 
 async function searchWallpapers() {
-  const query = document.getElementById("searchInput").value;
-  const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=30&client_id=${ACCESS_KEY}`;
-
-  const res = await fetch(url);
-  const data = await res.json();
-  displayWallpapers(data.results);  // Using 'results' for Unsplash API response
-}
-
-function displayWallpapers(photos) {
+  const query = document.getElementById("searchInput").value.toLowerCase();
   grid.innerHTML = "";
-  photos.forEach(photo => {
+
+  for (let i = 0; i < 30; i++) {
     const img = document.createElement("img");
-    img.src = photo.urls.small;  // Use 'small' image URL
-    img.alt = photo.photographer;
+    img.src = `https://picsum.photos/300/200?random=${Math.floor(Math.random() * 1000)}&q=${query}`;
+    img.alt = query;
     grid.appendChild(img);
-  });
+  }
 }
