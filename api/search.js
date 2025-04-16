@@ -1,13 +1,4 @@
-// api/search.js
-export default async function handler(req, res) {
-  const { query, per_page = 30 } = req.query;
+<input type="text" id="searchInput" placeholder="Search Wallpapers" oninput="searchWallpapers()" />
 
-  const response = await fetch(`https://api.pexels.com/v1/search?query=${query}&per_page=${per_page}`, {
-    headers: {
-      Authorization: process.env.8cBUjJ99dXuFDzwqUgvMOyzHUd5hLCz3mYBRZoCUfI8,
-    },
-  });
-
-  const data = await response.json();
-  res.status(200).json(data);
-}
+<!-- Make sure this is linked properly -->
+<script src="script.js"></script>
