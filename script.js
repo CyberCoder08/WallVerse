@@ -2,7 +2,7 @@ const grid = document.getElementById("wallpaperGrid");
 
 async function searchWallpapers() {
   const query = document.getElementById("searchInput").value;
-  const url = `/api/search?query=${encodeURIComponent(query)}&per_page=30`;
+  const url = `/api/search?query=${encodeURIComponent(query)}&per_page=30`; // Proxy URL
 
   const res = await fetch(url);
   const data = await res.json();
